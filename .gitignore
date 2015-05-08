@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+.*.swp
+build/
+fedup2.log
+fedup2/version.py

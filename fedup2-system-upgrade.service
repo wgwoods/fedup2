@@ -1,0 +1,7 @@
+[Unit]
+Description=Fedora Upgrade
+OnFailure=reboot.target
+Conflicts=packagekit-offline-update.service
+
+[Service]
+ExecStart=/usr/bin/fedup2 system-upgrade --reboot
