@@ -1,0 +1,9 @@
+[Unit]
+Description=DNF System Upgrade
+ConditionPathExists=/system-update/.dnf-fedup2-upgrade
+EnvironmentFile=/system-update/.dnf-fedup2-upgrade
+Conflicts=packagekit-offline-update.service
+OnFailure=reboot.target
+
+[Service]
+ExecStart=/usr/bin/dnf --releasever=${RELEASEVER} fedup2 upgrade
